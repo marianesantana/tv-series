@@ -1,25 +1,19 @@
 import axios from 'axios';
+const baseUrl = 'https://api.tvmaze.com/';
 
-const apiClient = axios.create({
-  baseURL: 'https://api.tvmaze.com/',
-  headers: {
-    Accept: 'application/json',
-    'Content-type': 'application/json',
-  },
-});
-apiClient.interceptors.response.use(
-  response => response.data,
-  error => {
-    let path = '/error';
-    return Promise.reject(error);
-  },
-);
-export const searchTvShow = input => {
-  apiClient.get(`/search/shows?q=${input}`);
+// Passing configuration object to axios
+// const fetchUser = async () => {
+//   const configurationObject = {
+//     method: 'get',
+//     url: `${baseUrl}/api/users/1`,
+//   };
+//   const response = await axios(configurationObject);
+//   console.log(response.data);
+// };
+
+// Invoking get method to perform a GET request
+export const fetchApi = async () => {
+  const url = `${baseUrl}/api/users/1`;
+  const response = await axios.get(url);
+  console.log(response.data);
 };
-
-export const showAllTvShows = () => {
-  apiClient.get('/shows');
-};
-
-export const getAllEpisodes = id => apiClient.get(`shows/${id}/episodes`);

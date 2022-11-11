@@ -1,29 +1,24 @@
 import React, {useEffect, useState} from 'react';
-import {showAllTvShows} from '../../services/app';
+import {Button, TextInput} from 'react-native';
+import {
+  apiClient,
+  fetchApiShow,
+  searchTvShow,
+  showAllTvShows,
+} from '../../services/app';
 // import { View } from 'react-native';
 
-import {Container, Text, ImageContainer, ImagesCarousel} from './styles';
+import {Container, TextOi, ImageContainer, ImagesCarousel} from './styles';
 
 const TvShowList = () => {
-  const [tvShows, setTvShows] = useState([]);
-
-  //   useEffect(() => {
-  //     const resultList = showAllTvShows();
-  //     console.log(resultList);
-  //     setTvShows(resultList);
-  //   }, [tvShows]);
   return (
     <Container>
-      {/* {tvShows.map(value => (
-        <Container key={value.id}>
-          <Text> Popular on MazeTV</Text>
-          <Text> {value.name}</Text>
-          <ImagesCarousel>
-            <ImageContainer source={value.image} />
-          </ImagesCarousel> */}
+      {/* <TextOi
+        onSubmit={handleSubmit}
+        onChange={handleChange}
+        value={state.name}
+      /> */}
     </Container>
-    //   ))}
-    // </Container>
   );
 };
 

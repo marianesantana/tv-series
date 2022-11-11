@@ -42,3 +42,4 @@ export const ImageContainer = styled.Image`
 
   border-radius: 2px;
 `;
+

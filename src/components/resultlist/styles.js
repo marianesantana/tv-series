@@ -14,25 +14,23 @@ export const SeriesImage = styled.Image`
   width: 146px;
   height: 76px;
   left: 0px;
-  top: 158px;
 
   border-radius: 2px;
 `;
 
-export const TextContainer = styled.View`
-  position: absolute;
-  width: 219px;
-  height: 30px;
-  left: 153px;
-  top: 181px;
-`;
+// export const TextContainer = styled.View`
+//   position: absolute;
+//   width: 219px;
+//   height: 30px;
+//   left: 153px;
+//   top: 181px;
+// `;
 
 export const Text = styled.Text`
   position: absolute;
-  width: 73.33px;
-  height: 30px;
-  left: 153px;
-  top: 181px;
+  width: 90%;
+  height: 60px;
+  left: 10%;
 
   font-family: 'SF Pro Display';
   font-style: normal;
